@@ -1,0 +1,27 @@
+/*Bace*/
+@import "./_bace/normolise";
+@import "./_bace/variables";
+@import "./_bace/mixin";
+@import "./_bace/media";
+@import "./_bace/bace";
+
+
+
+/*Blocks*/
+//Header
+@import "./_blocks/_header/header";
+@import "./_blocks/_header/header-nav";
+@import "./_blocks/_header/burger";
+
+
+//Main
+@import "./_blocks/_main/baceInfo";
+@import "./_blocks/_main/services";
+@import "./_blocks/_main/information";
+@import "./_blocks/_main/lawyers";
+@import "./_blocks/_main/reviews";
+@import "./_blocks/_main/materials";
+
+
+//Footer
+@import "./_blocks/_footer/footer";

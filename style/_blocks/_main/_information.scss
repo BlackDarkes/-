@@ -1,0 +1,83 @@
+.main-information{
+    @include page(var(--main-light));
+
+    &__block{
+        @include width-blocks(80);
+
+        .information{
+            @include flex-space;
+            gap: 64px;
+
+            &-base{
+                @include felx-column(35);
+
+                &__title{
+                    @include fluid-text(20, 28);
+                    position: relative;
+                    font-weight: 800;
+                    text-transform: uppercase;
+
+                    &--blue{
+                        font-weight: 900;
+                        color: var(--main-blue);
+                    }
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        bottom: -10px; left: 0;
+                        width: 50px; height: 3px;
+                        background-color: var(--main-blue);
+                    }
+                }
+
+                .bace-text{
+                    @include felx-column(34);
+                }
+
+                .bace-form{
+                    display: flex;
+                    gap: 24px;
+
+                    &__click{
+                        @include button-cust(var(--accessory-light), var(--main-dark));
+                        transition: 0.5s;
+
+                        &--blue{
+                            background-color: var(--main-blue);
+                            color: var(--main-light);
+                            border-color: var(--main-blue);
+
+                            @include hover{
+                                background-color: var(--main-light);
+                                color: var(--main-blue);
+                            }
+                        }
+                    }
+
+                    @include mobile{
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 40px;
+                    }
+                }
+            }
+
+            &__image{
+                filter: drop-shadow(0 0 12px var(--accent-shadow));
+
+                @include desctop{
+                    display: none;
+                }
+            }
+        }
+
+        @include laptop{
+            padding-block: 60px;
+        }
+
+        @include mobile{
+            padding-block: 40px;
+        }
+    }
+}

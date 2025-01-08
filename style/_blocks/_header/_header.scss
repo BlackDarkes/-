@@ -1,0 +1,46 @@
+.header-page{
+    @include page(var(--main-dark));
+
+    &__block{
+        @include width-blocks(14);
+
+        .header-up{
+            @include flex-space;
+            @include fluid-text(14, 16);
+            color: var(--main-light);
+
+            .header-link{
+                @include flex-center(28);
+
+                .header-info{
+                    @include flex-center(8);
+                    color: var(--main-blue);
+
+                    &__message{
+                        color: var(--main-light);
+                        transition: 0.5s all;
+
+                        @include hover{
+                            color: var(--main-blue);
+                        }
+                    }
+
+                    &--emale{
+                        @include mobile{
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            &__bell{
+                color: var(--main-light);
+                transition: 0.5s all;
+
+                @include hover{
+                    color: var(--main-blue);
+                }
+            }
+        }
+    }
+}

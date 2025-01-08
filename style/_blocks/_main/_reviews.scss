@@ -1,0 +1,158 @@
+.main-reviews{
+    @include page(var(--main-light));
+    background: url(../image/_main/reviews/back.png) bottom no-repeat;
+    background-size: cover;
+
+    &__block{
+        @include width-blocks(80);
+
+        .reviews{
+            @include felx-column(48);
+
+            &-head{
+                @include flex-space;
+
+                &__title{
+                    @include fluid-text(20, 28);
+                    position: relative;
+                    font-weight: 800;
+                    text-transform: uppercase;
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        bottom: -10px; left: 0;
+                        width: 50px; height: 3px;
+                        background-color: var(--main-blue);
+                    }
+                }
+
+                .icons{
+                    @include flex-center(13);
+                    color: var(--main-blue);
+
+                    &-click{
+                        width: 20px; height: 20px;
+                        color: var(--main-blue);
+                        transition: all 0.4s;
+
+                        @include hover{
+                            color: var(--main-dark);
+                        }
+                    }
+                }
+            }
+
+            &-slide{
+                display: flex;
+                column-gap: 24px;
+                width: min(100%, 1319px);
+                overflow-x: scroll;
+                scroll-snap-type: x mandatory;
+                scroll-snap-stop: start;
+
+                &::-webkit-scrollbar{
+                    width: 0;
+                }
+
+                .block-start{
+                    display: flex;
+                    column-gap: 24px;
+                }
+
+                .reviews-block{
+                    width: min(100%, 648px);
+                    flex-shrink: 0;
+                    padding: 32px;
+                    background-color: var(--main-light);
+                    scroll-snap-align: start;
+
+                    .block-info{
+                        @include felx-column(16);
+
+                        .block-head{
+                            @include flex-space;
+                            color: var(--accent-dark);
+
+                            .head-user{
+                                display: flex;
+                                column-gap: 24px;
+
+                                &__photo{
+                                    border-radius: 50%;
+                                }
+
+                                .user-info{
+                                    @include felx-column(4);
+
+                                    &__company{
+                                        font-weight: 300;
+                                    }
+
+                                    &__title{
+                                        @include fluid-text(18, 20);
+                                        font-weight: 700;
+                                    }
+                                }
+                            }
+
+                            .sheet{
+                                display: none;
+                            }
+                        }
+
+                        .block-body{
+                            &__info{
+                                font-size: var(--smoll-font);
+                                line-height: 21px;
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 4;
+                                overflow: hidden;
+
+                                @include mobile {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-active{
+                display: inline-flex;
+                column-gap: 24px;
+
+                &__click{
+                    @include button-cust();
+
+                    &--dark{
+                        @include button-cust(var(--accessory-light), var(--accent-dark));
+                    }
+
+                    @include mobile {
+                        margin-inline: auto;
+                    }
+                }
+
+                @include mobile {
+                    flex-direction: column;
+                    align-items: start;
+                    row-gap: 16px;
+                }
+            }
+
+            @include mobile {
+                row-gap: 30px;
+            }
+        }
+
+        @include laptop{
+            padding-block: 60px;
+        }
+
+        @include mobile{
+            padding-block: 40px;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+.main-baceInfo{
+    @include page(var(--main-light));
+    background: url(../image/_main/services/background.jpg) center no-repeat;
+    background-size: cover;
+    
+    &__block{
+        @include width-blocks(260px 20);
+
+        .baceInfo{
+            @include felx-column(192);
+
+            &-message{
+                @include felx-column(48);
+                color: var(--main-light);
+
+                .message-services{
+                    @include felx-inline-column(8);
+                    align-items: flex-start;
+
+                    &__menu{
+                        @include fluid-text(18, 30);
+                        margin-inline: auto;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        text-align: center
+                    }
+
+                    &__title{
+                        @include fluid-text(30, 56);
+                        margin-inline: auto;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        text-align: center;
+                        color: var(--main-blue);
+                    }
+
+                    &__text{
+                        @include fluid-text(16, 20);
+                        width: min(100%, 1090px);
+                        margin-inline: auto;
+                        text-align: center;
+                        font-weight: 400;
+                    }
+                }
+
+                .baceInfo-but{
+                    @include flex-column-center;
+
+                    &__services{
+                        @include button-cust;
+                        transition: 0.5s;
+                    }
+                }
+            }
+
+            &-icons{
+                @include flex-space;
+
+                .icons{
+                    @include flex-column-center(13);
+                    align-items: center;
+
+                    &-click{
+                        width: 20px;
+                        height: 20px;
+                        color: var(--main-light);
+
+                        &:hover > .icons-click__img{
+                            @include hover{
+                                color: var(--main-blue);
+                            }
+
+                            transition: 0.5s;
+                        }
+                    }
+                }
+
+                @include mobile{
+                    display: none;
+                }
+            }
+        }
+
+        @include desctop{
+            padding-block: 148px 24px;
+        }
+
+        @include mobile{
+            padding-block: 142px 60px;
+        }
+    }
+}

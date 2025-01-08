@@ -1,0 +1,170 @@
+.main-materials{
+    @include page(var(--main-light));
+
+    &__block{
+        @include width-blocks(80);
+
+        .materials {
+            @include felx-column(48);
+
+            &-head{
+                @include felx-column(37);
+                align-items: center;
+
+                &__title {
+                    @include fluid-text(20, 28);
+                    position: relative;
+                    text-transform: uppercase;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: -10px; left: calc((100% / 2) - (50px / 2));
+                        width: 50px; height: 3px;
+                        background-color: var(--main-blue);
+                    }
+                }
+
+                &__info {
+                    width: min(100%, 920px);
+                    text-align: center;
+                    line-height: 19.2px;
+                }
+            }
+
+            &-slide {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: 24px;
+
+                &::-webkit-scrollbar {
+                    height: 0
+                }
+
+                .material-listItem{
+                    @include felx-column(24);
+
+                    .material-image{
+                        position: relative;
+                        cursor: pointer;
+
+                        @include desctop-above{
+                            &:hover > .material-hover{
+                                opacity: 1;
+                            }
+                        }
+
+                        .material-hover{
+                            position: absolute;
+                            inset: 20px 32px;
+                            user-select: none;
+                            opacity: 0;
+                            transition: all 0.4s;
+
+                            .hover-line{
+                                color: var(--main-light);
+
+                                .hover-top {
+                                    @include flex-space;
+                                    position: absolute;
+                                    width: 100%;
+
+                                }
+
+                                .hover-bottom{
+                                    display: inline-flex;
+                                    justify-content: space-between;
+                                    position: absolute;
+                                    bottom: 0;
+                                    width: 100%;
+                                }
+                            }
+
+                            .hover-eye{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                position: absolute;
+                                inset: calc((100% / 2) - (40px / 2));
+                                width: 40px; height: 40px;
+                                background-color: var(--main-light);
+                                color: var(--main-blue);
+                                transition: all 0.5s;
+
+                                &:hover {
+                                    background-color: var(--main-blue);
+                                    color: var(--main-light);
+                                }
+                            }
+
+                            @include desctop {
+                                display: none
+                            }
+                        }
+                    }
+
+                    .material-info{
+                        @include felx-column(16);
+
+                        &__title{
+                            @include fluid-text(14,16);
+                            font-weight: 700;
+                            line-height: 24px;
+                            transition: 0.5s;
+
+                            @include hover {
+                                color: var(--main-blue);
+                            }
+                        }
+
+                        &__date {
+                            font-size: 12px;
+                            font-weight: 300;
+                        }
+
+                        &__text {
+                            font-size: 14px;
+                            line-height: 16.8px;
+
+                            @include desctop {
+                                width: min(100%, 360px);
+                            }
+                        }
+
+                    }
+
+                    @include desctop {
+                        flex-shrink: 0;
+                        width: min(70%, 400px);
+                        scroll-snap-align: start;
+                    }
+                }
+
+                @include desctop {
+                    display: flex;
+                    justify-content: space-between;
+                    overflow-x: scroll;
+                    scroll-snap-type: x mandatory;
+                    scroll-snap-stop: start;
+                }
+            }
+
+            &-active{
+                display: flex;
+                justify-content: center;
+
+                &__click{
+                    @include button-cust();
+                }
+            }
+        }
+
+        @include laptop {
+            padding-block: 60px;
+        }
+
+        @include mobile {
+            padding-block: 40px;
+        }
+    }
+}

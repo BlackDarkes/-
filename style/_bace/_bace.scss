@@ -1,0 +1,23 @@
+a{@include resize-link;}
+
+button{@include resize-button;}
+
+img{
+    user-select: none;
+}
+
+html{
+    font-family: "Nunito Sans", sans-serif;
+
+    &::-webkit-scrollbar{
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track{
+        background-color: var(--accessory-light);
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background-image: linear-gradient(to top left, rgb(12 46 94) 20%, rgb(79 143 240) 80%);
+    }
+}

@@ -1,0 +1,177 @@
+.main-lawyers{
+    @include page(var(--accent-light));
+
+    &__block{
+        @include width-blocks(80);
+
+        .lawyers{
+            @include felx-column(48);
+
+            &-info{
+                @include felx-column(37);
+                align-items: center;
+
+                &__title{
+                    @include fluid-text(20, 28);
+                    position: relative;
+                    font-weight: 800;
+                    text-transform: uppercase;
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        bottom: -10px; left: calc((100% / 2) - (50px / 2));
+                        width: 50px; height: 3px;
+                        background-color: var(--main-blue);
+                    }
+                }
+
+                &__text{
+                    width: min(100%, 920px);
+                    text-align: center;
+                    line-height: 19.2px;
+                }
+            }
+
+            &-list{
+                display: grid;
+                grid-template-columns: repeat(4, minmax(237px, 312px));
+                column-gap: 24px;
+                width: min(100%, 1340px);
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                scroll-snap-stop: start;
+
+                &::-webkit-scrollbar{
+                    width: 0;
+                }
+
+                &-items{
+                    position: relative;
+                    cursor: pointer;
+
+                    &:hover > .list-hover {
+                        opacity: 1;
+                    }
+
+                    @include desctop-above{
+                        @include hover{
+                            &:hover .block-hover{
+                                scale: 1;
+                                transition: 0.5s;
+                            }
+                        }
+                    }
+                }
+
+                .list-hover{
+                    @include felx-column(40);
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    inset: 0;
+                    background-color: var(--main-light);
+                    opacity: 0;
+                    padding-inline: 20px;
+                    pointer-events: none;
+                    transition: all 0.4s;
+
+                    .hiver-up{
+                        @include felx-column(10);
+                        align-items: center;
+
+                        &__title{
+                            font-weight: 700;
+                            font-size: var(--main-form);
+                            text-align: center;
+                            line-height: 19.2px;
+                        }
+
+                        &__text{
+                            font-weight: 300;
+                            font-size: var(--smoll-font);
+                            text-align: center;
+                            line-height: 19.2px;
+                        }
+                    }
+
+                    &__info{
+                        font-size: var(--smoll-font);
+                        font-weight: 300;
+                        text-align: center;
+                        line-height: 16.8px;
+                    }
+
+                    &__years{
+                        @include fluid-text(12, 16);
+                        font-weight: 600;
+                        line-height: 19.2px;
+                        text-align: center;
+                    }
+
+                    .block-hover{
+                        position: absolute;
+                        width: 90%;
+                        height: 90%;
+                        color: var(--main-blue);
+                        scale: 0;
+                        transition: 0.5s;
+
+                        .hover-up{
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                        .hover-down{
+                            position: absolute;
+                            bottom: 0;
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%
+                        }
+
+                        @include desctop{
+                            scale: 0;
+                        }
+                    }
+                }
+
+                .list-text{
+                    @include felx-column(10);
+                    align-items: center;
+                    padding: 24px 16px ;
+                    background-color: var(--main-light);
+                    scroll-snap-align: start;
+
+                    &--smool{
+                        @include desctop{
+                            padding: 24px 16px 8px;
+                        }
+                    }
+
+                    &__title{
+                        font-size: var(--main-form);
+                        font-weight: 700;
+                        text-align: center;
+                        line-height: 19.2px;
+                    }
+
+                    &__info{
+                        font-size: var(--smoll-font);
+                        font-weight: 300;
+                        line-height: 16.8px;
+                        text-align: center;
+                        color: var(--accent-dark);
+                    }
+                }
+            }
+        }
+
+        @include laptop{
+            padding-block: 60px;
+        }
+
+        @include mobile{
+            padding-block: 40px;
+        }
+    }
+}
