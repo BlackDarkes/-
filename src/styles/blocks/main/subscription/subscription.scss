@@ -1,0 +1,76 @@
+@use "../../../helpers/index.scss" as *;
+@use "../../../base/variables.scss" as *;
+
+.subscription {
+  &__container {
+    display: flex;
+    align-items: center;
+    column-gap: rem(64);
+    margin-inline: auto;
+    padding-block: rem(200);
+    width: min(100% - rem(40), rem(1180));
+
+    @include tablet() {
+      flex-direction: column;
+      padding-block: rem(100);
+    }
+  }
+
+  &__title {
+    @include fluid-text(26, 24);
+    position: relative;
+    font-weight: 900;
+
+    &::before {
+      content: "актуально";
+      position: absolute;
+      top: rem(-25);
+      color: $yellow;
+      font-weight: 400;
+      font-size: rem(18);
+    }
+  }
+
+  &__form {
+    @include tablet() {
+      margin-top: rem(60);
+      width: min(100%, rem(600));
+    }
+  }
+
+  &__label {
+    display: block;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  &__input {
+    padding: rem(12) rem(16);
+    background-color: $gray;
+    width: min(100%, rem(280));
+    border-radius: rem(4);
+  }
+
+  &__submit {
+    margin-left: rem(16 );
+    background-color: $greenBurger;
+    color: $white;
+    border: 1px solid $greenBurger;
+    transition: $transition;
+
+    @include hover() {
+      background-color: transparent;
+      color: $greenBurger;
+      border-radius: rem(8);
+    }
+
+    @include tablet() {
+      display: block;
+      margin: rem(16) 0 0 0;
+    }
+  }
+
+  &__true {
+    margin-top: rem(8);
+  }
+}
