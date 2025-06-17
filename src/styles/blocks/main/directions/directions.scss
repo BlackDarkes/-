@@ -1,0 +1,133 @@
+@use "../../../helpers/index.scss" as *;
+@use "../../../base/variables.scss" as *;
+
+.directions {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+    padding-block: rem(200) rem(80);
+    width: min(100% - rem(40), rem(1180));
+  }
+
+  &__title {
+    @include fluid-text(32, 24);
+    position: relative;
+    margin-bottom: rem(50);
+    text-align: center;
+    font-weight: 900;
+
+    &::before {
+      content: "по версии отдыхающих";
+      position: absolute;
+      top: rem(-25);
+      left: 0;
+      width: 100%;
+      color: $yellow;
+      text-align: center;
+      font-weight: 400;
+      font-size: rem(24);
+    }
+  }
+
+  &__slider {
+    display: flex;
+    justify-content: space-between;
+    column-gap: rem(20);
+    width: min(100%, 1180px);
+    height: rem(500);
+    overflow-x: auto;
+
+    @include mobile() {
+      height: rem(400);
+    }
+  }
+
+  &__item {
+    position: relative;
+    flex-shrink: 0;
+    width: rem(380);
+
+    &--first {
+      background-image: url("/image/baycal.png");
+
+      @include mobile() {
+        background-size: 100% 100%;
+      }
+    }
+
+    &--second {
+      background-image: url("/image/altay.png");
+
+      @include mobile() {
+        background-size: 100% 100%;
+      }
+    }
+
+    &--three {
+      background-image: url("/image/kavkas.png");
+
+      @include mobile() {
+        background-size: 100% 100%;
+      }
+    }
+
+    @include mobile() {
+      width: rem(285);
+    }
+  }
+
+  &__starts {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(4) rem(8);
+    right: 0;
+    top: rem(50);
+    width: rem(65);
+    background-color: $moreOpacityColor;
+  }
+
+  &__price {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: rem(25) rem(23);
+    width: 100%;
+    background-color: $opacityColor;
+    color: $white;
+  }
+
+  &__name {
+    @include fluid-text(24, 18);
+    font-weight: 700;
+  }
+
+  &__money {
+    padding: rem(8) rem(16);
+    background-color: $moreOpacityColor;
+    font-weight: 700;
+    font-size: rem(20);
+  }
+
+  &__button {
+    margin-top: rem(70);
+    background-color: $greenBurger;
+    color: $white;
+    border: 1px solid $greenBurger;
+    transition: $transition;
+
+    @include hover() {
+      color: $greenBurger;
+      background-color: transparent;
+      border-radius: rem(8);
+    }
+  }
+}

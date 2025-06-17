@@ -73,4 +73,12 @@
       display: none;
     }
   }
+
+  &__mobile {
+    display: none;
+
+    @include laptop() {
+      display: block;
+    }
+  }
 }

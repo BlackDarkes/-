@@ -16,22 +16,37 @@
     <header class="header">
       <section class="header__navigate">
         <h1 class="header__title">ТурПут</h1>
+
         <div class="header-burger">
           <button type="button" class="header-burger__button">
             <img src="/image/burger.png" alt="" />
           </button>
-          <div class="burger-block ">
-            <button class="burger-block__close"><img src="/image/close.png" alt=""></button>
+
+          <div class="burger-block">
+            <button class="burger-block__close">
+              <img src="/image/close.png" alt="" />
+            </button>
+
             <ul class="burger-block__list">
-              <li class="burger-block__item"><a href="" class="burger-block__link active">Главная</a></li>
-              <li class="burger-block__item"><a href="" class="burger-block__link">Программа тура</a></li>
-              <li class="burger-block__item"><a href="" class="burger-block__link">Стоимость</a></li>
-              <li class="burger-block__item"><a href="" class="burger-block__link">Блог</a></li>
-              <li class="burger-block__item"><a href="" class="burger-block__link">Контакты</a></li>
+              <li class="burger-block__item">
+                <a href="" class="burger-block__link active">Главная</a>
+              </li>
+              <li class="burger-block__item">
+                <a href="" class="burger-block__link">Программа тура</a>
+              </li>
+              <li class="burger-block__item">
+                <a href="" class="burger-block__link">Стоимость</a>
+              </li>
+              <li class="burger-block__item">
+                <a href="" class="burger-block__link">Блог</a>
+              </li>
+              <li class="burger-block__item">
+                <a href="" class="burger-block__link">Контакты</a>
+              </li>
             </ul>
           </div>
         </div>
-        
+
         <ul class="header__list">
           <li class="header__item">
             <a href="#" class="header__link action">Главная</a>
@@ -60,6 +75,7 @@
         <article class="header__slogan">
           ТурПут – открывай мир с удовольствием!
         </article>
+
         <form action="" method="post" class="header-form">
           <div class="header-form__item header-form__item--location">
             <select name="" id="" class="header-form__selector">
@@ -72,6 +88,7 @@
             </select>
             <p class="header-form__text">выберите из списка</p>
           </div>
+
           <div class="header-form__item header-form__item--date">
             <div class="header-form-date">
               <input type="date" name="" id="" class="header-form__date" />
@@ -79,6 +96,7 @@
             </div>
             <p class="header-form__text">укажите диапазон</p>
           </div>
+
           <div class="header-form__item header-form__item--participants">
             <select name="" id="" class="header-form__selector">
               <option value="Участники" disabled selected>Участники</option>
@@ -88,18 +106,99 @@
             </select>
             <p class="header-form__text">укажите количество</p>
           </div>
+
           <button type="button" class="header-form__submit">
             Найти программу
           </button>
         </form>
 
-        <div class="header-mobile__button">
+        <div class="header__mobile">
           <button type="button" class="header-form__submit">
             Найти программу
           </button>
         </div>
       </section>
     </header>
+
+    <main class="main">
+      <section class="program">
+        <div class="program__container">
+          <div class="program-best">
+            <h2 class="program-best__title">Лучшие программы для тебя</h2>
+            <article class="program-best__article">
+              ТурПут – путешествие, созданное под твои мечты!
+            </article>
+            <div class="program-best__travel">
+              <img src="/image/firstImage.png" alt="" class="program-best__image" />
+              <p class="program-best__text">ТурПут – отдых твоей мечты!</p>
+            </div>
+            <div class="program-best__travel">
+              <img src="/image/secondImage.png" alt="" class="program-best__image" />
+              <p class="program-best__text">Твой тур – твои правила!</p>
+            </div>
+            <div class="program-best__travel">
+              <img src="/image/thertImage.png" alt="" class="program-best__image" />
+              <p class="program-best__text">Путешествуй с умом – выбирай ТурПут!</p>
+            </div>
+            <button type="button" class="program-best__button">
+              Стоимость программ
+            </button>
+          </div>
+          <div class="program-images">
+            <img src="/image/bigImage.png" alt="">
+          </div>
+        </div>
+      </section>
+
+      <section class="directions">
+        <div class="directions__container">
+          <div class="directions__title">Популярные направления</div>
+
+          <ul class="directions__slider">
+            <li class="directions__item directions__item--first">
+              <div class="directions__starts">
+                <img src="/image/star.png" alt="">
+                <p class="directions__count">4.9</p>
+              </div>
+              <div class="directions__price">
+                <a href="" class="directions__name">Озеро байкал</a>
+                <p class="directions__money">38000₽</p>
+              </div>
+            </li>
+
+            <li class="directions__item directions__item--second">
+              <div class="directions__starts">
+                <img src="/image/star.png" alt="">
+                <p class="directions__count">4.5</p>
+              </div>
+              <div class="directions__price">
+                <a href="" class="directions__name">Горы алтая</a>
+                <p class="directions__money">45000₽</p>
+              </div>
+            </li>
+
+            <li class="directions__item directions__item--three">
+              <div class="directions__starts">
+                <img src="/image/star.png" alt="">
+                <p class="directions__count">5.0</p>
+              </div>
+              <div class="directions__price">
+                <a href="" class="directions__name">Горы кавказа</a>
+                <p class="directions__money">23000₽</p>
+              </div>
+            </li>
+          </ul>
+
+          <button type="button" class="directions__button">Рейтинг направлений</button>
+        </div>
+      </section>
+
+      <section class="traveling">
+        
+      </section>
+
+      <section class="subscription"></section>
+    </main>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,72 @@
+@use "../../../helpers/index.scss" as *;
+@use "../../../base/variables.scss" as *;
+
+.program {
+  background-color: $gray;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: auto;
+    padding-block: rem(80) rem(140);
+    width: min(100% - rem(40), rem(1180));
+
+    @include tablet() {
+      justify-content: center;
+    }
+  }
+
+  .program-best {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(40);
+
+    &__title {
+      @include fluid-text(32, 24);
+      position: relative;
+      font-weight: 900;
+
+      &::before {
+        content: "наше предложение";
+        position: absolute;
+        top: rem(-30);
+        left: 0;
+        color: $yellow;
+        font-weight: 400;
+        font-size: rem(24);
+      }
+    }
+
+    &__article {
+      @include fluid-text(18, 16);
+    }
+
+    &__travel {
+      @include fluid-text(18, 16);
+      display: flex;
+      align-items: center;
+      column-gap: rem(15);
+      font-weight: 700;
+    }
+
+    &__button {
+      align-self: flex-start;
+      background-color: $greenBurger;
+      color: $white;
+      border: 1px solid $greenBurger;
+      transition: $transition;
+
+      @include hover() {
+        background-color: transparent;
+        color: $greenBurger;
+        border-radius: rem(8);
+      }
+    }
+  }
+
+  &-images {
+    @include tablet() {
+      display: none;
+    }
+  }
+}

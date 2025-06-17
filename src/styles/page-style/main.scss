@@ -1,0 +1,16 @@
+/*Core*/
+@use "../base/normalize.scss";
+@use "../base/globals.scss";
+@use "../helpers/index.scss" as *;
+
+
+/*Header*/
+@use "../blocks/header/Navigation.scss";
+@use "../blocks/header/buy.scss";
+@use "../blocks/header/burger.scss";
+
+/*Main*/
+@use "../blocks/main/program/program.scss";
+@use "../blocks/main/directions/directions.scss";
+
+/*footer*/

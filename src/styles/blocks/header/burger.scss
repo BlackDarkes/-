@@ -4,6 +4,10 @@
 .header-burger {
   display: none;
 
+  &__button {
+    padding: 0;
+  }
+
   .burger-block {
     position: fixed;
     top: 0;
@@ -18,8 +22,9 @@
 
     &__close {
       position: absolute;
-      top: rem(20);
-      right: rem(20);
+      top: rem(50);
+      right: rem(30);
+      padding: 0;
     }
 
     &__list {
