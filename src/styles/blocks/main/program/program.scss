@@ -13,6 +13,7 @@
 
     @include tablet() {
       justify-content: center;
+      padding-bottom: rem(80);
     }
   }
 
