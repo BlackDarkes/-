@@ -1,0 +1,63 @@
+@use "./../../helpers/index.scss" as *;
+@use "./../../base/variables.scss" as *;
+
+
+.footer {
+  background-color: $green;
+  color: $white;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(60);
+    flex-wrap: wrap;
+    padding-block: rem(190) rem(60);
+    margin-inline: auto;
+    width: min(100% - rem(40), rem(1180));
+
+    @include tablet() {
+      padding-top: rem(50);
+    }
+  }
+
+  &__info {
+    display: flex;
+    column-gap: rem(24);
+    margin-top: rem(60);
+    font-size: rem(14);
+  }
+
+  &__social {
+    display: flex;
+    column-gap: rem(16  );
+    margin-top: rem(20);
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(16);
+  }
+
+  &__catalog {
+    margin-block: 0 rem(5);
+  }
+
+  &__item {
+    margin-left: rem(5);
+    transition: $transition;
+
+    @include hover() {
+      color: $yellow;
+      text-decoration: underline;
+    }
+  }
+
+  &__secure {
+    padding-block: rem(24);
+    width: 100%;
+    background-color: $black;
+    text-align: center;
+    font-size: rem(14);
+  }
+}
