@@ -1,0 +1,75 @@
+@use "../../base/variables.scss" as *;
+@use "../../helpers/index.scss" as *;
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-block: 0 rem(82);
+  width: 100%;
+  height: rem(985);
+  background-image: url("/image/mainImage.png");
+
+  &__navigate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: rem(40);
+    width: min(100% - rem(40), 1180px);
+    margin-inline: auto;
+  }
+
+  &__title {
+    color: $white;
+    font-size: rem(32);
+  }
+
+  &__list {
+    display: flex;
+    column-gap: rem(24);
+
+    @include tablet() {
+      display: none;
+    }
+  }
+
+  &__link {
+    position: relative;
+    color: $white;
+    font-size: rem(18);
+
+    @include hover() {
+      &:not(&.action) {
+        @include li-active;
+      }
+    }
+
+    &.action {
+      @include li-active;
+    }
+
+    &--button {
+      color: $white;
+      padding: rem(12) rem(24);
+      margin-left: rem(20);
+      background-color: $green;
+      border-radius: $buttonRadius;
+      border: 1px solid $green;
+      transition: $transition;
+
+      @include hover() {
+        border-radius: rem(8);
+        background-color: transparent;
+        color: $green;
+      }
+    }
+  }
+
+  @include tablet() {
+    padding-block: 0 rem(50);
+  }
+
+  @include mobile() {
+    height: 100vh;
+  }
+}

@@ -1,0 +1,48 @@
+@use "../../helpers/index.scss" as *;
+@use "../../base/variables.scss" as *;
+
+.header-burger {
+  display: none;
+
+  .burger-block {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $greenBurger;
+    color: $white;
+    font-size: rem(24);
+    transform: translateX(100%);
+    transition: $transition;
+
+    &__close {
+      position: absolute;
+      top: rem(20);
+      right: rem(20);
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(20);
+      padding: rem(50) 0 0 rem(30);
+    }
+
+    &__link {
+      position: relative;
+
+      &.active {
+        @include li-active;
+      }
+    }
+
+    &.active {
+      transform: translateX(0);
+    }
+  }
+
+  @include tablet() {
+    display: block;
+  }
+}

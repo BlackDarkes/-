@@ -1,46 +1,103 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
     <title>Vite App</title>
   </head>
   <body>
     <header class="header">
       <section class="header__navigate">
         <h1 class="header__title">ТурПут</h1>
-        <nav>
-          <ul class="header__list">
-            <li class="header__item"><a href="#" class="header__link">Главная</a></li>
-            <li class="header__item"><a href="#" class="header__link">Программа тура</a></li>
-            <li class="header__item"><a href="#" class="header__link">Стоимость</a></li>
-            <li class="header__item"><a href="#" class="header__link">Блог</a></li>
-            <li class="header__item"><a href="#" class="header__link">Контакты</a></li>
-            <li class="header__item"><a href="#" class="header__link header__link--button">Консультация</a></li>
-          </ul>
-        </nav>
+        <div class="header-burger">
+          <button type="button" class="header-burger__button">
+            <img src="/image/burger.png" alt="" />
+          </button>
+          <div class="burger-block ">
+            <button class="burger-block__close"><img src="/image/close.png" alt=""></button>
+            <ul class="burger-block__list">
+              <li class="burger-block__item"><a href="" class="burger-block__link active">Главная</a></li>
+              <li class="burger-block__item"><a href="" class="burger-block__link">Программа тура</a></li>
+              <li class="burger-block__item"><a href="" class="burger-block__link">Стоимость</a></li>
+              <li class="burger-block__item"><a href="" class="burger-block__link">Блог</a></li>
+              <li class="burger-block__item"><a href="" class="burger-block__link">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#" class="header__link action">Главная</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Программа тура</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Стоимость</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Блог</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Контакты</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__button header__link--button"
+              >Консультация</a
+            >
+          </li>
+        </ul>
       </section>
+
       <section class="header__buy">
-        <article class="header__slogan">ТурПут – открывай мир с удовольствием!</article>
+        <article class="header__slogan">
+          ТурПут – открывай мир с удовольствием!
+        </article>
         <form action="" method="post" class="header-form">
-          <div class="header-form__location">
+          <div class="header-form__item header-form__item--location">
             <select name="" id="" class="header-form__selector">
-              <option value="Локация для тура" disabled selected>Локация для тура</option>
+              <option value="Локация для тура" disabled selected>
+                Локация для тура
+              </option>
               <option value="">1</option>
               <option value="">2</option>
               <option value="">3</option>
             </select>
-            <p class="header-form__text"></p>
+            <p class="header-form__text">выберите из списка</p>
           </div>
-          <div class="header-form__date">
-
+          <div class="header-form__item header-form__item--date">
+            <div class="header-form-date">
+              <input type="date" name="" id="" class="header-form__date" />
+              <input type="date" name="" id="" class="header-form__date" />
+            </div>
+            <p class="header-form__text">укажите диапазон</p>
           </div>
-          <div class="header-form__participants"></div>
+          <div class="header-form__item header-form__item--participants">
+            <select name="" id="" class="header-form__selector">
+              <option value="Участники" disabled selected>Участники</option>
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+            </select>
+            <p class="header-form__text">укажите количество</p>
+          </div>
+          <button type="button" class="header-form__submit">
+            Найти программу
+          </button>
         </form>
+
+        <div class="header-mobile__button">
+          <button type="button" class="header-form__submit">
+            Найти программу
+          </button>
+        </div>
       </section>
     </header>
     <script type="module" src="/src/main.js"></script>

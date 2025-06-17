@@ -1,0 +1,76 @@
+@use "../../helpers/index.scss" as *;
+@use "../../base/variables.scss" as *;
+
+.header {
+  &__buy {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-block: rem(40);
+    margin-inline: auto;
+    width: min(100% - rem(40), rem(1180));
+    color: white;
+  }
+
+  &__slogan {
+    @include fluid-text(50, 30);    
+    margin-bottom: rem(100);
+
+    @include tablet() {
+      margin-bottom: rem(60);
+    }
+  }
+
+  &-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: rem(40) rem(42);
+    width: min(100%, rem(1180));
+    background-color: $opacityColor;
+    border-radius: rem(10);
+
+    &__item {
+      width: min(100%, rem(270));
+    }
+
+    &__selector {
+      padding: rem(14) rem(16);
+      width: 100%;
+      border-radius: rem(8);
+    }
+
+    &-date {
+      display: flex;
+      justify-content: space-between;
+      column-gap: rem(10);
+    }
+
+    &__date {
+      padding: rem(14) rem(16);
+      width: 50%;
+      border-radius: rem(8);
+    }
+
+    &__text {
+      margin: rem(10) 0 0 rem(8);
+    }
+
+    &__submit {
+      padding: rem(16) rem(36);
+      background-color: $white;
+      border: 1px solid $white;
+      transition: $transition;
+
+      @include hover() {
+        background-color: transparent;
+        color: $white;
+        border-radius: rem(8);
+      }
+    }
+
+    @include laptop() {
+      display: none;
+    }
+  }
+}
