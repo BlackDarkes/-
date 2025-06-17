@@ -1,0 +1,115 @@
+@use "../../../helpers/index.scss" as *;
+@use "../../../base/variables.scss" as *;
+
+.traveling {
+  background-color: $gray;
+
+  &__container {
+    margin-inline: auto;
+    width: min(100% - rem(40), 1180px);
+    padding-block: rem(80) rem(100);
+  }
+
+  &__title {
+    @include fluid-text(32, 24);
+    position: relative;
+    margin-bottom: rem(50);
+    text-align: center;
+    font-weight: 900;
+
+    &::before {
+      content: "делимся впечатлениями";
+      position: absolute;
+      top: rem(-25);
+      left: 0;
+      width: 100%;
+      color: $yellow;
+      text-align: center;
+      font-weight: 400;
+      font-size: rem(24);
+    }
+  }
+
+  &__blogs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  
+    gap: rem(25);
+
+    @include laptop() {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: rem(10);
+      width: 100%;
+      overflow-x: auto;
+    }
+  }
+
+  &__blog {
+    display: flex;
+    column-gap: rem(25);
+    padding: rem(16);
+    width: 100%;
+    background-color: $white;
+    border-radius: rem(10);
+
+    @include laptop() {
+      flex-direction: column;
+      flex-shrink: 0;
+      width: rem(285);
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-block: rem(16);
+    height: 100%;
+  }
+
+  &__name {
+    @include fluid-text(24, 20);
+    display: block;
+    margin-bottom: rem(16);
+    font-weight: 700;
+
+    @include hover() {
+      text-decoration: underline;
+    }
+  }
+
+  &__about {
+    font-size: rem(14);
+  }
+
+  &__date {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__time {
+    color: $yellow;
+  }
+
+  &__more {
+    @include hover() {
+      text-decoration: underline;
+    }
+  }
+
+  &__button {
+    display: block;
+    margin-top: rem(80);
+    margin-inline: auto;
+    background-color: $greenBurger;
+    color: $white;
+    border: 1px solid $greenBurger;
+    transition: $transition;
+
+    @include hover() {
+      background-color: transparent;
+      color: $greenBurger;
+      border-radius: rem(8);
+    }
+  }
+}

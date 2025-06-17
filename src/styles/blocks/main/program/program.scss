@@ -61,6 +61,10 @@
         color: $greenBurger;
         border-radius: rem(8);
       }
+
+      @include tablet() {
+        align-self: center;
+      }
     }
   }
 
