@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/TurPut/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <title>ТурПут</title>
+    <script type="module" crossorigin src="/TurPut/assets/main-D69Ah2kE.js"></script>
+    <link rel="modulepreload" crossorigin href="/TurPut/assets/header-Va079ZEG.js">
+    <link rel="stylesheet" crossorigin href="/TurPut/assets/main-2Gvrrgdw.css">
+  </head>
+  <body>
+    <header class="header">
+      <section class="header__navigate">
+        <h1 class="header__title">ТурПут</h1>
+
+        <div class="header-burger">
+          <button type="button" class="header-burger__button">
+            <img src="/TurPut/image/burger.png" alt="бургер кнопка" />
+          </button>
+
+          <div class="burger-block">
+            <button class="burger-block__close">
+              <img src="/TurPut/image/close.png" alt="Закрытие" />
+            </button>
+
+            <ul class="burger-block__list">
+              <li class="burger-block__item">
+                <a href="./" class="burger-block__link active">Главная</a>
+              </li>
+              <li class="burger-block__item">
+                <a href="./pages/article.html" class="burger-block__link">Программа тура</a>
+              </li>
+              <li class="burger-block__item">
+                <a href="./pages/buy.html" class="burger-block__link">Стоимость</a>
+              </li>
+              <li class="burger-block__item">
+                <a href="" class="burger-block__link">Блог</a>
+              </li>
+              <li class="burger-block__item">
+                <a href="./pages/contact.html" class="burger-block__link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="header__list">
+          <li class="header__item">
+            <p class="header__link action">Главная</p>
+          </li>
+          <li class="header__item">
+            <a href="./pages/article.html" class="header__link">Программа тура</a>
+          </li>
+          <li class="header__item">
+            <a href="./pages/contact.html" class="header__link">Контакты</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Блог</a>
+          </li>
+          <li class="header__item">
+            <a href="./pages/buy.html" class="header__link">Стоимость</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__button header__link--button">Консультация</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="header__buy">
+        <article class="header__slogan">ТурПут – открывай мир с удовольствием!</article>
+
+        <form action="" method="post" class="header-form">
+          <div class="header-form__item header-form__item--location">
+            <select name="" id="" class="header-form__selector">
+              <option value="Локация для тура" disabled selected>Локация для тура</option>
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+            </select>
+            <p class="header-form__text">выберите из списка</p>
+          </div>
+
+          <div class="header-form__item header-form__item--date">
+            <div class="header-form-date">
+              <input type="date" name="first-date" id="first-date" class="header-form__date" />
+              <input type="date" name="second-date" id="second-date" class="header-form__date" />
+            </div>
+            <p class="header-form__text">укажите диапазон</p>
+          </div>
+
+          <div class="header-form__item header-form__item--participants">
+            <select name="" id="" class="header-form__selector">
+              <option value="Участники" disabled selected>Участники</option>
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+            </select>
+            <p class="header-form__text">укажите количество</p>
+          </div>
+
+          <button type="button" class="header-form__submit">Найти программу</button>
+        </form>
+
+        <div class="header__mobile">
+          <button type="button" class="header-form__submit">Найти программу</button>
+        </div>
+      </section>
+    </header>
+
+    <main class="main">
+      <section class="program">
+        <div class="program__container" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000" data-aos-easing="linear"  data-aos-once="true">
+          <div class="program-best">
+            <h2 class="program-best__title">Лучшие программы для тебя</h2>
+            <article class="program-best__article">
+              ТурПут – путешествие, созданное под твои мечты!
+            </article>
+            <div class="program-best__travel">
+              <img
+                src="/TurPut/image/firstImage.png"
+                alt="первый показ отдыха"
+                class="program-best__image"
+              />
+              <p class="program-best__text">ТурПут – отдых твоей мечты!</p>
+            </div>
+            <div class="program-best__travel">
+              <img
+                src="/TurPut/image/secondImage.png"
+                alt="второй показ отдыха"
+                class="program-best__image"
+              />
+              <p class="program-best__text">Твой тур – твои правила!</p>
+            </div>
+            <div class="program-best__travel">
+              <img
+                src="/TurPut/image/thertImage.png"
+                alt="третий показ отдыха"
+                class="program-best__image"
+              />
+              <p class="program-best__text">Путешествуй с умом – выбирай ТурПут!</p>
+            </div>
+            <button type="button" class="program-best__button">Стоимость программ</button>
+          </div>
+          <div class="program-images">
+            <img src="/TurPut/image/bigImage.png" alt="показ отдыха" />
+          </div>
+        </div>
+      </section>
+
+      <section class="directions" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000" data-aos-easing="linear"  data-aos-once="true">
+        <div class="directions__container">
+          <div class="directions__title">Популярные направления</div>
+
+          <ul class="directions__slider">
+            <li class="directions__item directions__item--first">
+              <div class="directions__starts">
+                <img src="/TurPut/image/star.png" alt="звезда" />
+                <p class="directions__count">4.9</p>
+              </div>
+              <div class="directions__price">
+                <a href="./pages/article.html" class="directions__name">Озеро байкал</a>
+                <p class="directions__money">38000₽</p>
+              </div>
+            </li>
+
+            <li class="directions__item directions__item--second">
+              <div class="directions__starts">
+                <img src="/TurPut/image/star.png" alt="звезда" />
+                <p class="directions__count">4.5</p>
+              </div>
+              <div class="directions__price">
+                <a href="" class="directions__name">Горы алтая</a>
+                <p class="directions__money">45000₽</p>
+              </div>
+            </li>
+
+            <li class="directions__item directions__item--three">
+              <div class="directions__starts">
+                <img src="/TurPut/image/star.png" alt="звезда" />
+                <p class="directions__count">5.0</p>
+              </div>
+              <div class="directions__price">
+                <a href="" class="directions__name">Горы кавказа</a>
+                <p class="directions__money">23000₽</p>
+              </div>
+            </li>
+          </ul>
+
+          <button type="button" class="directions__button">Рейтинг направлений</button>
+        </div>
+      </section>
+
+      <section class="traveling" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000" data-aos-easing="linear"  data-aos-once="true">
+        <div class="traveling__container">
+          <h2 class="traveling__title">Блог о путешествиях</h2>
+
+          <div class="traveling__blogs">
+            <div class="traveling__blog">
+              <img src="/TurPut/image/itali1.png" alt="италия" class="traveling__image" />
+              <div class="traveling__info">
+                <div class="traveling__texts">
+                  <a href="" class="traveling__name">Красивая Италия, какая она в реальности?</a>
+                  <p class="traveling__about">
+                    Для современного мира базовый вектор развития предполагает независимые способы
+                    реализации соответствующих условий активизации.
+                  </p>
+                </div>
+                <div class="traveling__date">
+                  <p class="traveling__time">01/04/2025</p>
+                  <a href="" class="traveling__more">читать статью</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="traveling__blog">
+              <img src="/TurPut/image/itali2.png" alt="италия" class="traveling__image" />
+              <div class="traveling__info">
+                <div class="traveling__texts">
+                  <a href="" class="traveling__name">Долой сомнения! Весь мир открыт для вас!</a>
+                  <p class="traveling__about">
+                    Для современного мира базовый вектор развития предполагает независимые способы
+                    реализации соответствующих условий активизации ...
+                  </p>
+                </div>
+                <div class="traveling__date">
+                  <p class="traveling__time">01/04/2025</p>
+                  <a href="" class="traveling__more">читать статью</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="traveling__blog">
+              <img src="/TurPut/image/itali3.png" alt="италия" class="traveling__image" />
+              <div class="traveling__info">
+                <div class="traveling__texts">
+                  <a href="" class="traveling__name"
+                    >Как подготовиться к путешествию в одиночку?
+                  </a>
+                  <p class="traveling__about">
+                    Для современного мира базовый вектор развития предполагает.
+                  </p>
+                </div>
+                <div class="traveling__date">
+                  <p class="traveling__time">01/04/2025</p>
+                  <a href="" class="traveling__more">читать статью</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="traveling__blog">
+              <img src="/TurPut/image/itali4.png" alt="италия" class="traveling__image" />
+              <div class="traveling__info">
+                <div class="traveling__texts">
+                  <a href="" class="traveling__name">Индия ... летим?</a>
+                  <p class="traveling__about">
+                    Для современного мира базовый вектор развития предполагает независимые способы
+                    реализации соответствующих условий активизации.
+                  </p>
+                </div>
+                <div class="traveling__date">
+                  <p class="traveling__time">01/04/2025</p>
+                  <a href="" class="traveling__more">читать статью</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="traveling__button">Другие материалы</button>
+        </div>
+      </section>
+
+      <section class="subscription" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000" data-aos-easing="linear"  data-aos-once="true">
+        <div class="subscription__container">
+          <h2 class="subscription__title">Получайте полезные рассылки о путешествиях</h2>
+
+          <form method="post" class="subscription__form">
+            <label for="subscription" class="subscription__label">Введите e-mail адрес</label>
+            <input
+              type="email"
+              name="email"
+              id="subscription"
+              class="subscription__input"
+              placeholder="example@gmail.com"
+            />
+            <button class="subscription__submit">Подписаться на новости</button>
+            <p class="subscription__true">
+              подписываясь на новости, вы автоматически соглашаетесь с
+              <u>условиями обработки персональных данных</u> и
+              <u>правилами рекламных рассылок</u>
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__index">
+          <h2 class="footer__title">Компания «ТурПут»</h2>
+          <p class="footer__info">
+            <u><a href="mailto:exemple@gamil.com">exemple@gamil.com</a></u>
+            <u><a href="tel:+71234567890">+7 (123) 456-78-90</a></u>
+          </p>
+          <div class="footer__social">
+            <a href="" class="footer__telegram"><img src="/TurPut/image/telegram.png" alt="телеграм" /></a>
+            <a href="" class="footer__vk"><img src="/TurPut/image/vk.png" alt="вконтакте" /></a>
+          </div>
+        </div>
+
+        <ul class="footer__block footer__services">
+          <h3 class="footer__catalog">Наши услуги</h3>
+          <li class="footer__item">
+            <a href="" class="footer__link">Прогулки в горы летом</a>
+          </li>
+          <li class="footer__item">
+            <a href="" class="footer__link">Зимние походы в горы</a>
+          </li>
+          <li class="footer__item">
+            <a href="" class="footer__link">Посещение храмов в горах</a>
+          </li>
+          <li class="footer__item">
+            <a href="" class="footer__link">Экстремальные виды туризма</a>
+          </li>
+          <li class="footer__item">
+            <a href="" class="footer__link">Поездка в Африку</a>
+          </li>
+        </ul>
+
+        <ul class="footer__block footer__important">
+          <h3 class="footer__catalog">Важно для путешествий</h3>
+          <li class="footer__item">
+            <a href="" class="footer__link">Как собрать в долгий поход? </a>
+          </li>
+          <li class="footer__item">
+            <a href="" class="footer__link">Жизненно важные предметы для похода </a>
+          </li>
+          <li class="footer__item">
+            <a href="" class="footer__link">Медицинская страховка, гарантии безопасности </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__secure">Политика обработки персональных данных</div>
+    </footer>
+  </body>
+</html>
